@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6rem;
+  --color-border: rgba(0, 20, 20, 0.4);
+  --color-link: rgba(71, 209, 163, 0.79);
+  --color-text: rgba(10, 10, 10, 0.8);
+  --color-header: rgba(58, 160, 126, 0.79);
+}
+
+nav {
+  padding-top: 3rem;
+  height: 100%;
+  position: fixed;
+  border-right: 1px solid var(--color-border);
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  padding: 0 1rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+nav li:hover a {
+  color: var(--color-link);
+}
+
+main {
+  margin: 0 auto 11rem 31rem;
+  padding: 3rem;
+}
+
+header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--color-header);
+}
+
+article {
+  color: var(--color-text);
+  padding: 2rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-align: justify;
+}
+
+#intro {
+  font-size: 2rem;
+  text-align: center;
+}
+
+article li {
+  margin-left: 1.7rem;
+}
+
+code {
+  font-size: 1.5rem;
+  margin: 5rem;
+  white-space: pre-line;
+  position: relative;
+  line-height: 2;
+  background-color: var(--color-header);
+  padding: 0.6rem;
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 815px) {
+  body {
+    font-size: 55%;
+  }
+
+  nav {
+    font-size: 1.5rem;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  main {
+    position: relative;
+    margin: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  main {
+    margin-left: 1rem;
+  }
+
+  code {
+    margin-left: 0;
+    width: calc(100% - 2rem);
+    padding: 1.5rem 1rem;
+    min-width: auto;
+  }
+}
