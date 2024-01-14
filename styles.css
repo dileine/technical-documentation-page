@@ -14,10 +14,11 @@ body {
   --color-border: rgba(0, 20, 20, 0.4);
   --color-link: rgba(71, 209, 163, 0.79);
   --color-text: rgba(10, 10, 10, 0.8);
-  --color-text-hover: rgba(255, 255, 255, 1);
+  --color-header: rgba(58, 160, 126, 0.79);
 }
 
 nav {
+  padding-top: 3rem;
   height: 100%;
   position: fixed;
   border-right: 1px solid var(--color-border);
@@ -40,7 +41,7 @@ nav a {
   color: var(--color-text);
   padding: 0 1rem;
   display: block;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 nav li:hover a {
@@ -55,7 +56,8 @@ main {
 header {
   text-align: center;
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 400;
+  color: var(--color-header);
 }
 
 article {
@@ -63,15 +65,28 @@ article {
   padding: 2rem;
   font-size: 1.7rem;
   font-weight: 300;
+  text-align: justify;
+}
+
+#intro {
+  font-size: 2rem;
+  text-align: center;
 }
 
 article li {
-  margin-left: 17px;
+  margin-left: 1.7rem;
 }
 
 code {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin: 5rem;
+  white-space: pre-line;
+  position: relative;
+  line-height: 2;
+  background-color: var(--color-header);
+  padding: 0.6rem;
+  margin: 1.5rem;
+  border-radius: 0.5rem;
 }
 
 @media only screen and (max-width: 815px) {
@@ -80,43 +95,28 @@ code {
   }
 
   nav {
-    font-size: 2rem;
-  }
-
-  nav ul {
-    border: 1px solid var(--color-border);
-    height: 207px;
-  }
-
-  nav {
-    background-color: rgba(255, 255, 255, 1);
-    position: absolute;
+    font-size: 1.5rem;
+    position: relative;
     top: 0;
-    padding: 0;
-    margin: 0;
     width: 100%;
-    max-height: 275px;
-    border: none;
-    z-index: 1;
-    border-bottom: 2px solid var(--color-border);
   }
 
   main {
     position: relative;
     margin: 0;
-    margin-top: 270px;
+    margin-top: 1rem;
   }
 }
 
 @media only screen and (max-width: 400px) {
   main {
-    margin-left: 0;
+    margin-left: 1rem;
   }
 
   code {
     margin-left: 0;
-    width: 100%;
-    padding: 15px 10px;
+    width: calc(100% - 2rem);
+    padding: 1.5rem 1rem;
     min-width: auto;
   }
 }
